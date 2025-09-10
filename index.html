@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
             background-color: #101011;
             color: white;
             width: 100vw;
@@ -39,7 +39,7 @@
             color: rgba(255, 255, 255, 0.9);
             letter-spacing: -17.5px;
             opacity: 0;
-            animation: fadeInHeader 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+            animation: fadeInHeader 2.2s cubic-bezier(0.12, 0, 0.25, 1) 0.4s forwards;
         }
 
         /* Content container */
@@ -68,7 +68,7 @@
             overflow: hidden;
             transform: scaleX(0);
             transform-origin: left center;
-            animation: scaleInLine 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+            animation: scaleInLine 2.4s cubic-bezier(0.12, 0, 0.25, 1) 1.4s forwards;
         }
 
         .line svg {
@@ -85,7 +85,7 @@
             letter-spacing: -0.48px;
             margin-bottom: 52px;
             opacity: 0;
-            animation: fadeInBio 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+            animation: fadeInBio 1.8s cubic-bezier(0.12, 0, 0.25, 1) 2.8s forwards;
         }
 
         /* Footer */
@@ -102,13 +102,14 @@
 
         .footer-item {
             opacity: 0;
-            animation: fadeInFooter 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transform: translateY(12px);
+            animation: fadeInFooter 1.4s cubic-bezier(0.12, 0, 0.25, 1) forwards;
         }
 
-        .footer-item:nth-child(1) { animation-delay: 2.4s; }
-        .footer-item:nth-child(2) { animation-delay: 2.52s; }
-        .footer-item:nth-child(3) { animation-delay: 2.64s; }
-        .footer-item:nth-child(4) { animation-delay: 2.76s; }
+        .footer-item:nth-child(1) { animation-delay: 4.2s; }
+        .footer-item:nth-child(2) { animation-delay: 4.38s; }
+        .footer-item:nth-child(3) { animation-delay: 4.56s; }
+        .footer-item:nth-child(4) { animation-delay: 4.74s; }
 
         .footer a {
             color: inherit;
@@ -138,8 +139,14 @@
         }
 
         @keyframes fadeInFooter {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { 
+                opacity: 0; 
+                transform: translateY(12px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
         }
 
         /* Responsive breakpoints */
@@ -327,7 +334,7 @@
         <div class="header">
             Brandon Lal
         </div>
-
+        
         <div class="content">
             <!-- Line separator with responsive SVGs -->
             <div class="line-container">
@@ -366,11 +373,11 @@
                     </svg>
                 </div>
             </div>
-
+            
             <div class="bio">
                 I'm a Product Designer based in NYC with 7+ years of experience. I currently work on flagship consumption and content creation experiences at LinkedIn. Previously I designed enterprise marketing, B2B analytics and consumer financial tools.
             </div>
-
+            
             <div class="footer">
                 <div class="footer-item location">Brooklyn, NY</div>
                 <div class="footer-item">
