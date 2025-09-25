@@ -40,10 +40,10 @@
             background-color: #F5F5F7;
             color: #1D1D1F;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            min-height: 100vh;
+            min-height:100dvh;
             position: relative;
             height: 100vh;
-            padding: 1.5rem;
+            padding: 1rem;
         }
         .main {
             /* padding: 1rem; */
@@ -59,12 +59,12 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             width: 100vw;
-            height: 100vh;
+            height: 100%;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1;
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .col {
@@ -77,12 +77,12 @@
 
         .fake_col_container {
           position: absolute;
-          left: 24px;
+          left:1rem;
           top: 0;
           height: 100%;
           width: 15%;
           /* background: red; */
-          padding: 24px 0;
+          padding: 1rem 0;
         }
         .fake_col {
           border-left: 1px solid #E4E4E5;;
@@ -91,23 +91,23 @@
         }
 
         .col:nth-child(1) {
-          animation-delay: 450ms;
+          animation-delay: 350ms;
         }
         .col:nth-child(2) {
-          animation-delay: 800ms;
+          animation-delay: 600ms;
         }
         .col:nth-child(3) {
-          animation-delay: 1150ms;
+          animation-delay: 850ms;
         }
 
         .col:nth-child(4) {
-          animation-delay: 1500ms;
+          animation-delay: 1100ms;
         }
         .col:nth-child(5) {
-          animation-delay: 1850ms;
+          animation-delay: 1350ms;
         }
         .col:nth-child(6) {
-          animation-delay: 2200ms;
+          animation-delay: 1600ms;
         }
 
         /* .col:first-child {
@@ -128,7 +128,7 @@
             grid-column: 1;
             font-size: 24px;
             font-weight: 400;
-            animation-delay: 3250ms;
+            animation-delay: 1750ms;
               z-index: 5;
               margin-top: -5.5px;
         }
@@ -136,11 +136,11 @@
         .description {
             grid-column: 5 / 7;
             font-size: 12px;
-            line-height: 1.4;
+            line-height: 1.12;
             align-items: end;
-            animation-delay: 3250ms;
+            animation-delay: 1750ms;
               z-index: 5;
-              margin-top: -4px;
+              margin-top: -2px;
         }
 
         .footer {
@@ -148,7 +148,7 @@
             grid-template-columns: repeat(6, 1fr);
             margin-top: auto;
             align-items: end;
-            animation-delay: 3000ms;
+            animation-delay: 1750ms;
               z-index: 5;
               margin-bottom: -1px;
         }
@@ -260,13 +260,13 @@
 <body>
     <div class="main">
         <div class="grid-container">
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-            <div class="fake_col_container animate__animated animate__fadeInDown animate__slow">
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="col animate__animated animate__fadeInDown "></div>
+            <div class="fake_col_container animate__animated animate__fadeInDown">
               <div class="fake_col">
               </div>
             </div>
@@ -278,7 +278,7 @@
                 I'm a Product Designer based in NYC with 7+ years of experience. At LinkedIn, I design flagship experiences across content creation, consumption, and analytics. Previously, I built B2B marketplaces, marketing and admin tools, as well as enterprise analytics and business intelligence platforms.
             </p>
         </div>
-        <div class="footer animate__animated animate__fadeIn animate__slow">
+        <div class="footer animate__animated animate__fadeIn">
             <a href="#" class="past-work">Past work</a>
             <a href="mailto:brandon@example.com" class="email">Email</a>
             <a href="https://linkedin.com/in/brandonlal" class="linkedin">LinkedIn</a>
