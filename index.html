@@ -2,413 +2,278 @@
 <html lang="en">
 <head>
 
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LM3NLZ4XB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-6LM3NLZ4XB');
-</script>
+  gtag('config', 'G-6LM3NLZ4XB');</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ />
+
     <title>Brandon Lal - Product Designer</title>
-    
+
     <!-- Black Circle Favicon -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23000000'/%3E%3C/svg%3E">
-    
+
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        html, body {
-            width: 100%;
-            height: 100dvh;
-            background-color: #101011;
-            font-family: 'SF Pro', system-ui, -apple-system, sans-serif;
-            overflow-x: hidden;
+        :root {
+          --animate-delay: 800ms;
         }
+
+        body {
+            background-color: #0A0A0A;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            position: relative;
+            height: 100vh;
+            padding: 1.5rem;
+        }
+        .main {
+            /* padding: 1rem; */
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* To draw the bg grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 1.5rem;
+        }
+
+        .col {
+            background-color: transparent;
+            border-right: 0.5px solid #171717;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .fake_col_container {
+          position: absolute;
+          left: 24px;
+          top: 0;
+          height: 100%;
+          width: 15%;
+          /* background: red; */
+          padding: 24px 0;
+        }
+        .fake_col {
+          border-left: 0.5px solid #171717;
+          width: 100%;
+          height: 100%;
+        }
+
+        .col:nth-child(1) {
+          animation-delay: 350ms;
+        }
+        .col:nth-child(2) {
+          animation-delay: 550ms;
+        }
+        .col:nth-child(3) {
+          animation-delay: 750ms;
+        }
+
+        .col:nth-child(4) {
+          animation-delay: 950ms;
+        }
+        .col:nth-child(5) {
+          animation-delay: 1150ms;
+        }
+        .col:nth-child(6) {
+          animation-delay: 1250ms;
+        }
+
+        /* .col:first-child {
+            border-left: 0.5px solid #171717;
+        } */
 
         .container {
-            position: relative;
-            width: 100%;
-            height: 100dvh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            padding: 16px 32px 32px 32px;
-        }
-
-        .body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-            width: 100%;
-            min-height: 0;
-        }
-
-        .header {
-            font-family: 'SF Pro Display', system-ui, -apple-system, sans-serif;
-            font-size: 350px;
-            line-height: 1;
-            color: rgba(255, 255, 255, 0.9);
-            letter-spacing: -20px;
-            font-weight: 410;
-            opacity: 0;
-            animation: fadeInHeader 2.2s cubic-bezier(0.12, 0, 0.25, 1) 0.4s forwards;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .line-container {
-            height: 0;
-            width: 100%;
-            position: relative;
-            margin-bottom: 32px;
-        }
-
-        .line-wrapper {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: -1px;
-            overflow: hidden;
-            transform: scaleX(0);
-            transform-origin: left center;
-            animation: expandLine 2.4s cubic-bezier(0.12, 0, 0.25, 1) 1.4s forwards;
-        }
-
-        .line-img {
-            display: block;
-            width: 100%;
+            margin: 0 auto;
             height: 100%;
-            max-width: none;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            align-content: start;
         }
 
-        .bio {
-            font-family: 'SF Pro Display', system-ui, -apple-system, sans-serif;
-            font-size: 48px;
-            line-height: 1.1;
-            color: white;
-            letter-spacing: -0.24px;
-            font-weight: 350;
-            width: 100%;
-            margin-bottom: 64px;
-            opacity: 0;
-            animation: fadeInBio 1.8s cubic-bezier(0.12, 0, 0.25, 1) 2.8s forwards;
+        .name {
+            grid-column: 1;
+            font-size: 36px;
+            font-weight: 400;
+            animation-delay: 3000ms;
+        }
+
+        .description {
+            grid-column: 5 / 7;
+            font-size: 15px;
+            line-height: 1.5;
+            align-items: end;
+            animation-delay: 3000ms;
         }
 
         .footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif;
-            font-size: 16px;
-            line-height: 20px;
-            color: rgba(255, 255, 255, 0.75);
-            letter-spacing: -0.16px;
-            font-weight: normal;
-            width: 100%;
-            white-space: nowrap;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-top: auto;
+            align-items: end;
+            animation-delay: 3000ms;
         }
 
-        .footer-item {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-
-        .footer-item:nth-child(1) {
-            animation: fadeInFooterItem 1.4s cubic-bezier(0.12, 0, 0.25, 1) 4s forwards;
-        }
-
-        .footer-item:nth-child(2) {
-            animation: fadeInFooterItem 1.4s cubic-bezier(0.12, 0, 0.25, 1) 4.25s forwards;
-        }
-
-        .footer-item:nth-child(3) {
-            animation: fadeInFooterItem 1.4s cubic-bezier(0.12, 0, 0.25, 1) 4.5s forwards;
-        }
-
-        .footer-item:nth-child(4) {
-            animation: fadeInFooterItem 1.4s cubic-bezier(0.12, 0, 0.25, 1) 4.75s forwards;
-        }
-
-        .footer-link {
-            color: rgba(255, 255, 255, 0.6);
+        .footer a {
+            color: #ffffff;
             text-decoration: none;
-            transition: all 0.2s ease;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
         }
 
-        .footer-link:hover {
-            color: white;
+        .footer a:hover {
+            opacity: 0.7;
             text-decoration: underline;
+            text-decoration-color:#ffffff;
         }
 
-        /* Animations */
-        @keyframes fadeInHeader {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .past-work {
+            grid-column: 1;
         }
 
-        @keyframes expandLine {
-            from {
-                transform: scaleX(0);
-            }
-            to {
-                transform: scaleX(1);
-            }
+        .email {
+            grid-column: 3;
         }
 
-        @keyframes fadeInBio {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .linkedin {
+            grid-column: 5;
         }
 
-        @keyframes fadeInFooterItem {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
+        .ig {
+            grid-column: 6;
+            text-align: right;
+        }
+
+        .grid-container,
+.grid-container .col,
+.grid-container .fake_col_container {
+  pointer-events: none;
+}
+
+        /* Mobile Styles */
+        @media (max-width: 1280px) {
+            .name {
+                grid-column: 1 / 3;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .description {
+                grid-column: 4 / 7;
             }
         }
 
-        /* Responsive Design - Breakpoints: 1750px, 1525px, 1275px, 1050px, 825px, 600px, 468px */
-        
-        /* Default: Above 1750px */
-        .line-default { display: block; }
-        .line-1650 { display: none; }
-        .line-1425 { display: none; }
-        .line-1200 { display: none; }
-        .line-975 { display: none; }
-        .line-750 { display: none; }
-        .line-525 { display: none; }
-        .line-393 { display: none; }
-
-        /* ≤ 1750px */
-        @media (max-width: 1750px) {
-            .header {
-                font-size: 300px;
-                letter-spacing: -15px;
-            }
-            .bio {
-                font-size: 48px;
-                letter-spacing: -0.24px;
-            }
-            .footer {
-                font-size: 12px;
-                letter-spacing: -0.12px;
-            }
-            .line-container {
-                margin-bottom: 32px;
-            }
-            .bio {
-                margin-bottom: 64px;
-            }
-            .line-default { display: none; }
-            .line-1650 { display: block; }
-        }
-
-        /* ≤ 1525px */
-        @media (max-width: 1525px) {
-            .header {
-                font-size: 250px;
-                letter-spacing: -12.5px;
-            }
-            .bio {
-                font-size: 40px;
-                letter-spacing: -0.2px;
-            }
-            .line-container {
-                margin-bottom: 24px;
-            }
-            .bio {
-                margin-bottom: 64px;
-            }
-            .line-1650 { display: none; }
-            .line-1425 { display: block; }
-        }
-
-        /* ≤ 1275px */
-        @media (max-width: 1275px) {
-            .header {
-                font-size: 200px;
-                letter-spacing: -10px;
-            }
-            .bio {
-                font-size: 32px;
-                letter-spacing: -0.16px;
-            }
-            .line-container {
-                margin-bottom: 20px;
-            }
-            .bio {
-                margin-bottom: 48px;
-            }
-            .line-1425 { display: none; }
-            .line-1200 { display: block; }
-        }
-
-        /* ≤ 1050px */
-        @media (max-width: 1050px) {
-            .header {
-                font-size: 150px;
-                letter-spacing: -7.5px;
-            }
-            .bio {
-                font-size: 24px;
-                letter-spacing: -0.12px;
-            }
-            .footer {
-                font-size: 10px;
-                letter-spacing: -0.1px;
-            }
-            .line-container {
-                margin-bottom: 16px;
-            }
-            .bio {
-                margin-bottom: 40px;
-            }
-            .line-1200 { display: none; }
-            .line-975 { display: block; }
-        }
-
-        /* ≤ 825px */
-        @media (max-width: 825px) {
-            .header {
-                font-size: 100px;
-                letter-spacing: -5px;
-            }
-            .bio {
-                font-size: 20px;
-                letter-spacing: -0.1px;
-            }
-            .line-container {
-                margin-bottom: 16px;
-            }
-            .bio {
-                margin-bottom: 32px;
-            }
-            .line-975 { display: none; }
-            .line-750 { display: block; }
-        }
-
-        /* ≤ 600px */
-        @media (max-width: 600px) {
+        /* Mobile Styles */
+        @media (max-width: 640px) {
             .container {
-                padding: 12px 24px 24px 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
-            .header {
-                font-size: 75px;
-                letter-spacing: -3.75px;
-            }
-            .bio {
-                font-size: 16px;
-                letter-spacing: -0.08px;
-            }
-            .line-container {
-                   margin-bottom: 12px;
-            }
-            .bio {
-                margin-bottom: 24px;
-            }
-            .line-750 { display: none; }
-            .line-525 { display: block; }
-        }
 
-        /* ≤ 468px */
-        @media (max-width: 468px) {
-            .container {
-                padding: 8px 16px 16px 16px;
+            .footer {
+                display: flex;
+                flex-direction: row;
+                margin-top: 2rem;
             }
-            .header {
-                font-size: 48px;
-                letter-spacing: -2.4px;
+
+            .footer a {
+                font-size: 0.95rem;
+                width: 33.33%;
             }
-            .bio {
-                font-size: 15px;
-                letter-spacing: -0.07px;
-                line-height: 1.25;
-              margin-bottom: 14px;
-                font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif;
+
+            .footer a:nth-child(2) {
+                text-align: center;
             }
-            .content {
-                gap: 0px;
+
+            .footer a:nth-child(3) {
+                text-align: right;
             }
-            .line-container {
-                    margin-bottom: 12px;
-            }
-            .bio {
-                margin-bottom: 16px;
-            }
-            .footer-item:first-child {
+
+            .footer a:last-child {
                 display: none;
             }
-            .line-525 { display: none; }
-            .line-393 { display: block; }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1.5rem;
+            }
+
+            .col:nth-child(2) {
+              overflow: hidden;
+            }
+
+            .col:nth-child(3) {
+                overflow: hidden;
+            }
+
+            .col:nth-child(4) {
+                overflow: hidden;
+            }
+
+            .col:nth-child(5) {
+                overflow: hidden;
+
+            }
+
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="body">
-            <div class="header">Brandon Lal</div>
-            
-            <div class="content">
-                <div class="line-container">
-                    <div class="line-wrapper">
-                        <img class="line-img line-default" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%201992%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%221992%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.6%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-1650" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%201586%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%221586%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.6%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-1425" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%201361%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%221361%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-1200" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%201136%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%221136%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-975" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20911%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%22911%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-750" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20686%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%22686%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-525" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20477%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%22477%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                        <img class="line-img line-393" src="data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%20351%201%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20id%3D%22Line%201%22%20y1%3D%220.5%22%20x2%3D%22351%22%20y2%3D%220.5%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.4%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="">
-                    </div>
-                </div>
-
-                <div class="bio">
-                    <p>I’m a Product Designer based in NYC with 7+ years of experience. At LinkedIn, I design flagship experiences across content creation, consumption, and analytics. Previously, I built B2B marketplaces, marketing and admin tools, as well as enterprise analytics and business intelligence platforms.</p>
-                </div>
-
-                <div class="footer">
-                    <div class="footer-item">
-                        <a href="https://www.figma.com/proto/GUiXRfUMx7uvf1MEV0zUxq/08-26?page-id=0%3A1&node-id=104-43333&viewport=164%2C-166%2C0.1&t=Y0hOGEPa08VjpDAo-1&scaling=contain&content-scaling=fixed&starting-point-node-id=6%3A65610&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer" class="footer-link">Work</a>
-                    </div>
-                    <div class="footer-item">
-                        <a href="https://instagram.com/brandonlal" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
-                    </div>
-                    <div class="footer-item">
-                        <a href="https://linkedin.com/in/brandonlal" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                    </div>
-                    <div class="footer-item">
-                        <a href="mailto:brandondavelal@gmail.com" class="footer-link">Email</a>
-                    </div>
-                </div>
+    <div class="main">
+        <div class="grid-container">
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+            <div class="fake_col_container animate__animated animate__fadeInDown animate__slow">
+              <div class="fake_col">
+              </div>
             </div>
+        </div>
+        <div class="container">
+            <h1 class="name animate__animated animate__fadeIn">Brandon Lal</h1>
+
+            <p class="description animate__animated animate__fadeIn">
+                I'm a Product Designer based in NYC with 7+ years of experience. At LinkedIn, I design flagship experiences across content creation, consumption, and analytics. Previously, I built B2B marketplaces, marketing and admin tools, as well as enterprise analytics and business intelligence platforms.
+            </p>
+        </div>
+        <div class="footer animate__animated animate__fadeIn animate__slow">
+            <a href="#" class="past-work">Past work</a>
+            <a href="mailto:brandon@example.com" class="email">Email</a>
+            <a href="https://linkedin.com/in/brandonlal" class="linkedin">LinkedIn</a>
+            <a href="https://instagram.com/brandonlal" class="ig">IG</a>
         </div>
     </div>
 </body>
