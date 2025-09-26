@@ -317,12 +317,22 @@
     }
 
     .col {
-      border-right: 1px solid #C3C3C3;
+      border-right: .75px solid #C3C3C3;
     }
 
     .fake_col {
-      border-left: 1px solid #C3C3C3;
+      border-left: .75px solid #C3C3C3;
     }
+    
+   @keyframes lineFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .25;
+    }
+  }
+    
   }
 
   </style>
