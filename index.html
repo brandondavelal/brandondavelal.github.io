@@ -4,286 +4,353 @@
 <head>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LM3NLZ4XB"></script>
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LM3NLZ4XB"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-6LM3NLZ4XB');</script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
- />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
-    <title>Brandon Lal - Product Designer</title>
+  <title>Brandon Lal - Product Designer</title>
 
-    <!-- Black Circle Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23000000'/%3E%3C/svg%3E">
+  <!-- Black Circle Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23000000'/%3E%3C/svg%3E">
 
+  <style>
 
-    <style>
+  @font-face {
+  font-family: 'NeuMontreal';                /* Any name you choose */
+  src: url('PPNeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal;                   /* or 400, etc. */
+  font-style: normal;                    /* or italic, etc. */
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        :root {
-          --animate-delay: 800ms;
-        }
-
-        body {
-            background-color: #F5F5F7;
-            color: #1D1D1F;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            min-height:100dvh;
-            position: relative;
-            height: 100dvh;
-            padding: 1rem;
-        }
-        .main {
-            /* padding: 1rem; */
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* To draw the bg grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            width: 100vw;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            padding: 1rem;
-        }
-
-        .col {
-            background-color: transparent;
-            border-right: 1px solid #E4E4E5;;
-            height: 100%;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .fake_col_container {
-          position: absolute;
-          left:1rem;
-          top: 0;
-          height: 100%;
-          width: 15%;
-          /* background: red; */
-          padding: 1rem 0;
-        }
-        .fake_col {
-          border-left: 1px solid #E4E4E5;;
-          width: 100%;
-          height: 100%;
-        }
-
-        .col:nth-child(1) {
-          animation-delay: 350ms;
-        }
-        .col:nth-child(2) {
-          animation-delay: 500ms;
-        }
-        .col:nth-child(3) {
-          animation-delay: 650ms;
-        }
-
-        .col:nth-child(4) {
-          animation-delay: 800ms;
-        }
-        .col:nth-child(5) {
-          animation-delay: 950ms;
-        }
-        .col:nth-child(6) {
-          animation-delay: 1100ms;
-        }
-
-        /* .col:first-child {
-            border-left: 1px solid #E4E4E5;;
-        } */
-
-        .container {
-            margin: 0 auto;
-            height: 100%;
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            align-content: start;
-              z-index: 5;
-        }
-
-        .name {
-            grid-column: 1;
-            font-size: 24px;
-            font-weight: 400;
-            animation-delay: 1600ms;
-              z-index: 5;
-              margin-top: -5.5px;
-        }
-
-        .description {
-            grid-column: 5 / 7;
-            font-size: 12px;
-            line-height: 1.12;
-            align-items: end;
-            animation-delay: 1600ms;
-              z-index: 5;
-              margin-top: -2px;
-        }
-
-        .footer {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            margin-top: auto;
-            align-items: end;
-            animation-delay: 1600ms;
-              z-index: 5;
-              margin-bottom: -1px;
-        }
-
-        .footer a {
-            color: #1D1D1F;
-            text-decoration: none;
-            font-size: 11px;
-            transition: opacity 0.3s ease;
-        }
-
-        .footer a:hover {
-            opacity: 0.7;
-            text-decoration: underline;
-            text-decoration-color:#1D1D1F;
-        }
-
-        .past-work {
-            grid-column: 1;
-        }
-
-        .email {
-            grid-column: 3;
-        }
-
-        .linkedin {
-            grid-column: 5;
-        }
-
-        .ig {
-            grid-column: 6;
-            text-align: right;
-        }
-
-        .grid-container,
-.grid-container .col,
-.grid-container .fake_col_container {
-  pointer-events: none;
+@font-face {
+font-family: 'NeuMontrealItalic';                /* Any name you choose */
+src: url('PPNeueMontreal-Italic.otf') format('opentype');
+font-weight: normal;                   /* or 400, etc. */
+font-style: normal;                    /* or italic, etc. */
 }
 
 
-        /* Mobile Styles */
-        @media (max-width: 1280px) {
-            .name {
-                grid-column: 1 / 3;
-            }
 
-            .description {
-                grid-column: 4 / 7;
-            }
-        }
 
-        /* Mobile Styles */
-        @media (max-width: 640px) {
-            .container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --animate-delay: 800ms;
+  }
 
-            .footer {
-                display: flex;
-                flex-direction: row;
-                margin-top: 1.5rem;
-            }
+  body {
+    background-color: #181818;
+    color: #AFAFAF;
+    font-family: 'NeuMontreal', sans-serif;  /* include a fallback */
+    min-height:100dvh;
+    position: relative;
+    height: 100dvh;
+    padding: 1rem;
+  }
+  .main {
+    /* padding: 1rem; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
 
-            .footer a {
+  /* To draw the bg grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
+    opacity: 1;
+    /* animation */
+    animation: lineFadeOut 1s ease 3.35s forwards;
+    /* animation-name: lineFadeOut;
+    animation-duration: 300ms;
+    animation-delay: 2200ms;
+    animation-timing-function: ease-in; */
+  }
 
-                width: 33.33%;
-            }
+  @keyframes lineFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .36;
+    }
+  }
 
-            .footer a:nth-child(2) {
-                text-align: center;
-            }
+  .col {
+    background-color: transparent;
+    border-right: .25px solid #303030;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-            .footer a:nth-child(3) {
-                text-align: right;
-            }
+  .fake_col_container {
+    position: absolute;
+    left:1rem;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    /* background: red; */
+    padding: 1rem 0;
+  }
+  .fake_col {
+    border-left: .25px solid #303030;
+    width: 100%;
+    height: 100%;
+  }
 
-            .footer a:last-child {
-                display: none;
-            }
+  .col:nth-child(1) {
+    animation-delay: 350ms;
+  }
+  .col:nth-child(2) {
+    animation-delay: 550ms;
+  }
+  .col:nth-child(3) {
+    animation-delay: 750ms;
+  }
 
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 1rem;
-            }
+  .col:nth-child(4) {
+    animation-delay: 950ms;
+  }
+  .col:nth-child(5) {
+    animation-delay: 1150ms;
+  }
+  .col:nth-child(6) {
+    animation-delay: 1350ms;
+  }
 
-            .col:nth-child(2) {
-              overflow: hidden;
-            }
+  /* .col:first-child {
+  border-left: .25px solid #A4A3A3;;
+  } */
 
-            .col:nth-child(3) {
-                overflow: hidden;
-            }
+  .container {
+    margin: 0 auto;
+    height: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-content: start;
+    z-index: 5;
+  }
 
-            .col:nth-child(4) {
-                overflow: hidden;
-            }
+  .name {
+    grid-column: 1;
+    font-size: 30px;
+    font-weight: 400;
+    animation-delay: 3.5s;
+    z-index: 5;
+    margin-top: -5.5px;
+  }
 
-            .col:nth-child(5) {
-                overflow: hidden;
+  .description {
+    grid-column: 5 / 7;
+    font-size: 16px;
+    line-height: 1.5;
+    align-items: end;
+    animation-delay: 3.5s;
+    z-index: 5;
+    margin-top: -2px;
+  }
 
-            }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: auto;
+    align-items: end;
+  animation-delay: 3.5s;
+    z-index: 5;
+    margin-bottom: -1px;
+  }
 
-        }
-    </style>
+  .footer a {
+    color: #D3D3D3;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+
+  .past-work {
+    grid-column: 1;
+  }
+
+  .email {
+    grid-column: 3;
+  }
+
+  .linkedin {
+    grid-column: 5;
+  }
+
+  .ig {
+    grid-column: 6;
+    text-align: right;
+  }
+
+  .grid-container,
+  .grid-container .col,
+  .grid-container .fake_col_container {
+    pointer-events: none;
+  }
+
+  /* Mobile Styles */
+  @media (min-width: 1921px) {
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      width: 1888px;
+    }
+
+    .grid-container {
+      width: 1920px;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+    }
+
+  }
+
+
+
+
+
+  /* Mobile Styles */
+  @media (max-width: 1280px) {
+    .name {
+      grid-column: 1 / 3;
+    }
+
+    .description {
+      grid-column: 4 / 7;
+    }
+  }
+
+  @media (max-width: 740px) {
+    .name {
+      grid-column: 1 / 3;
+    }
+
+    .description {
+      grid-column: 3 / 7;
+    }
+  }
+  /* Mobile Styles */
+  @media (max-width: 640px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.5rem;
+    }
+
+    .footer a {
+
+      width: 33.33%;
+    }
+
+    .footer a:nth-child(2) {
+      text-align: center;
+    }
+
+    .footer a:nth-child(3) {
+      text-align: right;
+    }
+
+    .footer a:last-child {
+      display: none;
+    }
+
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+    }
+
+    .col:nth-child(2) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(3) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(4) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(5) {
+      overflow: hidden;
+    }
+
+  }
+  </style>
 </head>
 <body>
-    <div class="main">
-        <div class="grid-container">
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="col animate__animated animate__fadeInDown animate__fast"></div>
-            <div class="fake_col_container animate__animated animate__fadeInDown">
-              <div class="fake_col">
-              </div>
-            </div>
+  <div class="main">
+    <div class="grid-container">
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="fake_col_container animate__animated animate__fadeInDown animate__slow">
+        <div class="fake_col">
         </div>
-        <div class="container">
-            <h1 class="name animate__animated animate__fadeIn">Brandon Lal</h1>
-
-            <p class="description animate__animated animate__fadeIn">
-                I'm a Product Designer based in NYC with 7+ years of experience. At LinkedIn, I design flagship experiences across content creation, consumption, and analytics. Previously, I built B2B marketplaces, marketing and admin tools, as well as enterprise analytics and business intelligence platforms.
-            </p>
-        </div>
-        <div class="footer animate__animated animate__fadeIn">
-            <a href="#" class="past-work">Past work</a>
-            <a href="mailto:brandon@example.com" class="email">Email</a>
-            <a href="https://linkedin.com/in/brandonlal" class="linkedin">LinkedIn</a>
-            <a href="https://instagram.com/brandonlal" class="ig">IG</a>
-        </div>
+      </div>
     </div>
+    <div class="container">
+      <h1 class="name animate__animated animate__fadeIn animate_slow">Brandon Lal</h1>
+
+      <p class="description animate__animated animate__fadeIn animate_slow">
+        I’m a Senior Product Designer based in NYC with 7+ years of experience transforming complex business needs into clear, elegant product ecosystems. <br><br>At LinkedIn, I lead flagship experiences across content creation, consumption, and analytics—working closely with product and engineering to shape vision, build high-fidelity prototypes, and scale experiences depended on by hundreds of millions of professionals.
+Previously, I designed B2B marketplaces, marketing and admin tools, and enterprise business intelligence platforms. <br><br> My work brings clarity to ambiguity, and is rooted in turning bold ideas into thoughtful, incremental solutions. I pride myself in building durable systems, obsessing over visual craft, and sharing compelling stories to bring leaders and partners together. <br><br> - <br><br><i>"Of course design is about problem solving, but I cannot resist adding something personal"</i> - Wim Crouwel
+      </p>
+    </div>
+    <div class="footer animate__animated animate__fadeIn animate_slow">
+      <a href="#" class="past-work">Past work</a>
+      <a href="mailto:brandon@example.com" class="email">Email</a>
+      <a href="https://linkedin.com/in/brandonlal" class="linkedin">LinkedIn</a>
+      <a href="https://instagram.com/brandonlal" class="ig">Instagram</a>
+    </div>
+  </div>
 </body>
 </html>
