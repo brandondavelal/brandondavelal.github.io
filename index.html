@@ -1,133 +1,339 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandon Lal</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<style>
-@font-face {
-  font-family: 'NeuMontreal';
-  src: url('PPNeueMontreal-Regular.otf') format('opentype');
-}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LM3NLZ4XB"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-@font-face {
-  font-family: 'NeuMontrealMedium';
-  src: url('PPNeueMontreal-Medium.otf') format('opentype');
-}
+  gtag('config', 'G-6LM3NLZ4XB');</script>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
-:root {
-  --animate-delay: 800ms;
-}
+  <title>Brandon Lal - Product Designer</title>
 
-body {
-  background-color: #222222;
-  color: #F7F7F7;
-  min-height: 100dvh;
-  position: relative;
-  height: 100dvh;
-  padding: 1rem;
-  min-height: 512px;
-}
+  <!-- Black Circle Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23000000'/%3E%3C/svg%3E">
 
-.main {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
+  <style>
 
-/* Grid background */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  width: 100vw;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 1rem;
-  opacity: 1;
-  animation: lineFadeOut 1s ease 3.35s forwards;
-}
+  @font-face {
+    font-family: 'NeuMontreal';                /* Any name you choose */
+    src: url('PPNeueMontreal-Regular.otf') format('opentype');
+  }
 
-@keyframes lineFadeOut {
-  from { opacity: 1; }
-  to { opacity: .15; }
-}
+  @font-face {
+    font-family: 'NeuMontrealMedium';                /* Any name you choose */
+    src: url('PPNeueMontreal-Medium.otf') format('opentype');
+  }
 
-.col {
-  border-right: .75px solid #C3C3C3;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --animate-delay: 800ms;
+  }
 
-.fake_col {
-  border-left: .75px solid #C3C3C3;
-}
+  body {
+    background-color: #F7F7F7;
+    color: #222222;
+    min-height:100dvh;
+    position: relative;
+    height: 100dvh;
+    padding: 1rem;
+    min-height:512px;
+  }
+  .main {
+    /* padding: 1rem; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
 
-.name {
-  font-family: 'NeuMontrealMedium', sans-serif;
-  font-size: 40px;
-  font-weight: normal;
-  overflow: visible;
-}
+  /* To draw the bg grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
+    opacity: 1;
+    /* animation */
+    animation: lineFadeOut 1s ease 3.35s forwards;
+  }
 
-.description {
-  font-family: 'NeuMontrealMedium', sans-serif;
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 500;
-}
+  @keyframes lineFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .15;
+    }
+  }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3rem;
-  margin-bottom: -1px;
-}
+  .col {
+    background-color: transparent;
+    border-right: .5px solid #222222;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.footer a {
-  font-family: 'NeuMontrealMedium', sans-serif;
-  font-size: 11px;
-  font-weight: normal;
-  width: 33.33%;
-  color: #F7F7F7;
-  text-decoration: none;
-}
+  .fake_col_container {
+    position: absolute;
+    left:1rem;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    /* background: red; */
+    padding: 1rem 0;
+  }
+  .fake_col {
+    border-left: .5px solid #222222;
+    width: 100%;
+    height: 100%;
+  }
 
-.footer a:nth-child(2) {
-  text-align: center;
-}
+  .col:nth-child(1) {
+    animation-delay: 350ms;
+  }
+  .col:nth-child(2) {
+    animation-delay: 550ms;
+  }
+  .col:nth-child(3) {
+    animation-delay: 750ms;
+  }
+  .col:nth-child(4) {
+    animation-delay: 950ms;
+  }
+  .col:nth-child(5) {
+    animation-delay: 1150ms;
+  }
+  .col:nth-child(6) {
+    animation-delay: 1350ms;
+  }
 
-.footer a:nth-child(3) {
-  text-align: right;
-}
+  .container {
+    margin: 0 auto;
+    height: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-content: start;
+    z-index: 5;
+  }
 
-.footer a:last-child {
-  display: none;
-}
+  .name {
+    grid-column: 1;
+    animation-delay: 3.5s;
+    z-index: 5;
+    margin-top: -7px;
+    font-family: 'NeuMontrealMedium', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+  }
 
-.grid-container {
-  grid-template-columns: repeat(2, 1fr);
-  padding: 1rem;
-}
+  .description {
+    grid-column: 5 / 7;
+    align-items: end;
+    animation-delay: 3.5s;
+    z-index: 5;
+    margin-top: -4px;
+    font-family: 'NeuMontreal', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    font-weight: normal;
+  }
 
-.col:nth-child(2),
-.col:nth-child(3),
-.col:nth-child(4),
-.col:nth-child(5) {
-  overflow: hidden;
-}
-</style>
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: auto;
+    align-items: end;
+    animation-delay: 3.5s;
+    z-index: 5;
+    margin-bottom: -1px;
+  }
+
+  .footer a {
+    color: #222222;
+    font-family: 'NeuMontrealMedium', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer a:hover {
+    opacity: .6;
+    text-decoration: underline;
+    text-decoration-color: #222;
+  }
+
+  .past-work {
+    grid-column: 1;
+  }
+  .email {
+    grid-column: 3;
+  }
+  .linkedin {
+    grid-column: 5;
+  }
+  .ig {
+    grid-column: 6;
+    text-align: right;
+  }
+
+  .grid-container,
+  .grid-container .col,
+  .grid-container .fake_col_container {
+    pointer-events: none;
+  }
+
+  /* Mobile Styles */
+  @media (min-width: 1921px) {
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      width: 1888px;
+    }
+
+    .grid-container {
+      width: 1920px;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  @media (max-width: 1280px) {
+    .name {
+      grid-column: 1 / 3;
+    }
+
+    .description {
+      grid-column: 4 / 7;
+    }
+  }
+  @media (max-width: 740px) {
+    .name {
+      grid-column: 1 / 3;
+    }
+
+    .description {
+      grid-column: 3 / 7;
+    }
+  }
+  @media (max-width: 640px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      margin-top: 3rem;
+      margin-bottom: -1px;
+    }
+
+    .footer a {
+      font-family: 'NeuMontrealMedium', sans-serif;
+       font-family: 'NeuMontrealMedium', sans-serif;
+      font-size: 11px;
+      font-weight: normal;
+      width: 33.33%;
+    }
+
+    .footer a:nth-child(2) {
+      text-align: center;
+    }
+
+    .footer a:nth-child(3) {
+      text-align: right;
+    }
+
+    .footer a:last-child {
+      display: none;
+    }
+
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+    }
+
+    .col:nth-child(2) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(3) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(4) {
+      overflow: hidden;
+    }
+
+    .col:nth-child(5) {
+      overflow: hidden;
+    }
+    .name {
+      font-family: 'NeuMontrealMedium', sans-serif;
+      font-size: 40px;
+      font-weight: normal;
+      overflow: visible;
+    }
+
+    .description {
+      font-family: 'NeuMontrealMedium', sans-serif;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .col {
+      border-right: .75px solid #C3C3C3;
+    }
+
+    .fake_col {
+      border-left: .75px solid #C3C3C3;
+    }
+
+   @keyframes lineFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .75;
+    }
+  }
+
+  }
+
+  </style>
 </head>
 
 <body>
@@ -137,13 +343,27 @@ body {
       <div class="col animate__animated animate__fadeInDown animate__slow"></div>
       <div class="col animate__animated animate__fadeInDown animate__slow"></div>
       <div class="col animate__animated animate__fadeInDown animate__slow"></div>
-      <div class="fake_col"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="col animate__animated animate__fadeInDown animate__slow"></div>
+      <div class="fake_col_container animate__animated animate__fadeInDown animate__slow">
+        <div class="fake_col">
+        </div>
+      </div>
     </div>
-
-    <div class="footer">
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="#">Email</a>
+    <div class="container">
+      <h1 class="name animate__animated animate__fadeIn animate_slow">Brandon Lal</h1>
+      <p class="description animate__animated animate__fadeIn animate_slow">
+        I’m a Senior Product Designer in NYC with 7+ years of experience turning complex business needs into elegant product ecosystems.
+        <br><br>At LinkedIn, I lead flagship experiences across content creation, consumption, and analytics—partnering with product and engineering to shape vision, build high-fidelity prototypes, and scale systems used by hundreds of millions. Previously, I designed B2B marketplaces, marketing tools, and enterprise analytics platforms.
+        <br><br>I bring clarity to ambiguity, turning bold ideas into thoughtful, incremental solutions. I focus on durable systems, visual craft, and compelling storytelling to align leaders and partners.
+        <br><br>"Of course design is about problem solving, but I cannot resist adding something personal" - Wim Crouwel
+      </p>
+    </div>
+    <div class="footer animate__animated animate__fadeIn animate_slow">
+      <a href="#" class="past-work">Past work</a>
+      <a href="mailto:brandon@example.com" class="email">Email</a>
+      <a href="https://linkedin.com/in/brandonlal" class="linkedin">LinkedIn</a>
+      <a href="https://instagram.com/brandonlal" class="ig">Instagram</a>
     </div>
   </div>
 </body>
